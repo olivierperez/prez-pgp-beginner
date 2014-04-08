@@ -1,0 +1,3 @@
+Dans "bindClicks", j'ai remplacé mousedown par click.
+Dans index.html j'ai ajouté :
+	$('a').click(function(evt){evt.stopPropagation()});

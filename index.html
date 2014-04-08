@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PGP</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="components/normalize-css/normalize.css" />
+  <link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="components/highlightjs/styles/tomorrow.css" />
+  <link rel="stylesheet" href="css/ruban.min.css" />
+  <link rel="stylesheet" href="css/ruban-print.min.css" media="print" />
+  <link rel="stylesheet" href="css/pgp.css" />
+</head>
+
+<body>
+  <section id="pgp">
+	<pre style="text-align: center; font-family: 'Source Code Pro';"></pre>
+  </section>
+  <section class="no-toc">
+    <h1>Olivier PEREZ</h1>
+    <ul class="nodisc">
+      <li><i class="fa fa-map-marker"></i> Lyon, France</li>
+      <li><i class="fa fa-building-o"></i> <a href="http://atosworldline.net" title="Atos Worldline" target="_blank">Atos Worldline</a>
+		<ul>
+		<span class="lower"><i class="fa fa-folder-open"></i> FGDR</span>
+		</ul>
+	  </li>
+      <li><i class="fa fa-twitter"></i>    <a href="https://twitter.com/olivierperez" title="@olivierperez sur Twitter" target="_blank">@olivierperez</a></li>
+      <li><i class="fa fa-github"></i>     <a href="https://github.com/olivierperez" title="@olivierperez sur GitHub" target="_blank">@olivierperez</a></li>
+      <li><i class="fa fa-external-link"></i>     <a href="https://github.com/olivierperez/prez-pgp-beginner" title="PGP Beginner Presentation" target="_blank">Cette présentation</a></li>
+    </ul>
+  </section>
+  <section class="reminder title">
+    <h1><i class="fa fa-check-square-o "></i> Rappels</h1>
+  </section>
+  <section class="the-system title">
+    <h1><i class="fa fa-bullseye"></i> Système</h1>
+  </section>
+  <section class="the-tools title">
+    <h1><i class="fa fa-cog"></i> Outils</h1>
+  </section>
+  
+  <!-- Reminder -->
+  
+  <section class="reminder">
+    <h1><i class="fa fa-check-square-o"></i> Rappels</h1>
+	<ol class="steps">
+		<li>PGP vs GPG</li>
+		<li>Chiffrement asymétrique</li>
+	</ol>
+  </section>
+  <section class="reminder">
+    <h1>PGP <img src="images/vs.jpg" style="vertical-align:middle;border:2px #0071B5 solid;"/> GPG</h1>
+	<ul>
+		<li>PGP - Pretty Good Privacy</li>
+		<li>GPG - GNU Privacy Guard</li>
+	</ul>
+  </section>
+  <section class="reminder">
+    <h1>Chiffrement asymétrique</h1>
+	<ul>
+		<li>Clé publique <img src="images/lock_opened.png" class="alignwithtext"/></li>
+		<li>Clé privée <img src="images/key.png" class="alignwithtext"/></li>
+	</ul>
+  </section>
+  <section class="reminder">
+    <h1>Pas de question !</h1>
+  </section>
+  
+  <!-- The system -->
+  
+  <section class="the-system">
+    <h1><i class="fa fa-bullseye"></i> Système</h1>
+	<ol class="steps">
+		<li>Chiffrement</li>
+		<li>Signature</li>
+		<li>Créer un message</li>
+		<li>Toile de confiance</li>
+	</ol>
+  </section>
+  <section class="the-system">
+    <h1>Chiffrement</h1>
+	<ul>
+		<li>Clé publique du destinataire</li>
+		<li>Lui seul peut déchiffrer</li>
+	</ul>
+	<br/>
+	<img src="images/encrypt.png"/>
+  </section>
+  <section class="the-system">
+    <h1>Signature</h1>
+	<ul>
+		<li>Clé privée de l'expéditeur</li>
+		<li>Il signe (hash) le message</li>
+		<li>Clé et sous-clé</li>
+	</ul>
+	<br/>
+	<img src="images/sign.png"/>
+  </section>
+  <section class="the-system">
+    <h1>Créer un message</h1>
+	<ul>
+		<li>Un contenu en clair</li>
+		<li>Une clé privée</li>
+		<li>Une clé publique</li>
+	</ul>
+  </section>
+  <section class="the-system">
+    <h1>Créer un message</h1>
+	<ul><li>Signature</li></ul>
+	<img src="images/message_format_sign.png" alt="Signature du message"/>
+  </section>
+  <section class="the-system">
+    <h1>Créer un message</h1>
+	<ul>
+		<li>Clé de session</li>
+		<li>
+			<img src="images/sym_key.png" class="alignwithtext"/>
+			=
+			<img src="images/sym_lock.png" class="alignwithtext"/>
+		</li>
+	</ul>
+	<img src="images/message_format_encrypt_sym.png" alt="Chiffrement symétrique du message"/>
+  </section>
+  <section class="the-system">
+    <h1>Créer un message</h1>
+	<ul><li>Clé publique <img src="images/public_lock.png" class="alignwithtext"/></li></ul>
+	<img src="images/message_format_encrypt_asym.png" alt="Chiffrement de la clé de session"/>
+  </section>
+  <section class="the-system">
+    <h1>Créer un message</h1>
+	<img src="images/message_format_summary.png" alt="Résumé du chiffrement" style="width:500px;margin:auto;display: block;"/>
+  </section>
+  <section class="the-system">
+    <h1>Toile de confiance</h1>
+	<ul class="steps">
+		<li>J'ai confiance en mes amis</li>
+		<li>Ils ont confiance en leurs amis</li>
+		<li>J'ai confiance en Chasles</li>
+		<li>Niveaux de confiance</li>
+	</ul>
+  </section>
+  <section class="the-system">
+    <h1>Résumé du système</h1>
+	<ul>
+		<li>Pas de Man In The Middle</li>
+		<li>Une confiance humaine</li>
+	</ul>
+  </section>
+  <section class="the-system">
+    <h1>Questions ?</h1>
+	<pre><code class="java">if (gpgSystem.understoodBy(audience)) {
+	step.next();
+} else {
+	throw new UnderstandException("hein !?");
+}</code></pre>
+  </section>
+  
+  <!-- The tools -->
+  
+  <section id="the-tools-head" class="the-tools">
+    <h1><i class="fa fa-cog"></i> Outils</h1>
+	<ol class="steps">
+		<li>Pour les <strong>null</strong></li>
+		<li id="for-developers">Pour les développeurs<span class="euse">(euses)</span></li>
+		<li>Appel à l'aide</li>
+	</ol>
+  </section>
+  <section class="the-tools">
+    <h1>Pour les null</h1>
+	<ul>
+		<li><a href="https://www.enigmail.net/home/"><i class="fa fa-external-link"></i> Enigmail</a></li>
+		<li><a href="http://www.gpg4win.org/doc/en/gpg4win-compendium_33.html"><i class="fa fa-external-link"></i> GpgOL Outlook extension</a></li>
+		<li>
+			<a href="http://www.gpg4win.org/"><i class="fa fa-external-link"></i> Gpg4Win - Kleopatra</a>
+			<br/>
+			<img src="images/kleopatra.jpg"/>
+		</li>
+	</ul>
+  </section>
+  <section class="the-tools">
+    <h1>Développeurs(euses)</h1>
+	<ul>
+		<li><a href="http://www.bouncycastle.org/fr/"><i class="fa fa-external-link"></i> Bouncy Castle</a>
+			<ul><li><span class="lower">C# &amp; Java</span></li></ul>
+		</li>
+		<li><a href="http://www.gnupg.org/"><i class="fa fa-external-link"></i> GnuPG</a></li>
+	</ul>
+  </section>
+  <section class="the-tools">
+    <h1>Appel à l'aide</h1>
+	<ul class="steps">
+		<li>TODO...</li>
+		<li>Oui, tout reste à faire !</li>
+	</ul>
+  </section>
+  
+  <!-- Stay-tuned -->
+  
+  <section class="stay-tuned title">
+    <h1><i class="fa fa-cog"></i> Stay-tuned</h1>
+  </section>
+  
+  <section class="stay-tuned publickey">
+    <h1>Stay tuned</h1>
+	<pre>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1.4.6 (MingW32)
+
+mQGiBFM+0SYRBADgDB2ZtVewt7f/jbhrHfV3UQblYnMyaGFPJ0eoNGzcSvy2CEKg
+jH9mA+a5+QeMs7ed44mgd9JIMt3kMG4E17hOSE7gLAe05noE74ogkBKifbBcBOzt
+naFpv/1R+YWOuqlC95kyGTSmC587Ktrh++tijPcqdD5aWynCDFUtc91dXwCg6Kc+
+xdEvwzXfDswtPuvdzwU082cEAKbEBHaWxQjGWSEDelXN/2rhlsPfIW9eW5MczTuw
+yQCveHW1M7axvHOKwO0IrlNb+3MeC7uXb4kz0YypJwYRjR5Dmg/tFsKjU4TmOCW5
+75S9S1ugj24jSuLjmICCgmjbjp76tdwPlmvPXjxyXnj3+uRSZmtk+IkZ+BPgJgHo
+CJ7BBACIl9wT7B3i4ZecC88adfb8+hI0NXm9tYeuhQAa9DztY3BB4ucukXUL0LsX
+zmcKYDDUiaeQFc+Q+4IVnANHG3Z/nxHB6xXVdiloYGkteChEXWPY9cczQSZ6IOC2
+3iKlI4+6zXcnlA/qLG9txrQI59PeJPdE+Y0hG1hw14ayGLoo+rQrT2xpdmllciBQ
+RVJFWiA8b2xpdmllci5wZXJlekB3b3JsZGxpbmUuY29tPohmBBMRAgAmBQJTPtEm
+AhsDBQkB4TOABgsJCAcDAgQVAggDBBYCAwECHgECF4AACgkQU4kQdBUXTRVSkACf
+e7ykT8WZAdmdM0jMDaCjZyi4BAYAnAlHFYdEsH377/4ASG8yoHR5arhhuQENBFM+
+0SYQBAC/ueyZfahLw+MX9L3Ndf/vuGnalaDfDHhlFMUlB/xCyexobA2buErjYj2e
+6LbAfwXzifSqk5DcVI8RhRoFgomPdwF0J1Q7FsldgrT5piVLAi5ERMafvE8qdS5q
+c1pc3gInXrgcY6NWgb+VJ/OwwRth4VDMDAjZIgsVoNcU4jVJxwAEDQQAgL+e3bPd
+QHD0CznaKdcWA4ns14F6q8E3U7kqaL9YSh4tV/HYLuMvDUCNlzh/ShvhHkgtPZfL
+tyNtLqZWDX7xO54Fps1UI368KeDVOXyW4ta5fZeJRvelF6bsTqqSaKNS6JK/rUqm
+5HY1fBqtRXkvYaBFuZNVYqliQg+uzeT1XjGITwQYEQIADwUCUz7RJgIbDAUJAeEz
+gAAKCRBTiRB0FRdNFSJhAJ9bU8sjOuMD9QmSiEWhd6wiOLqdwQCdF+hRPtu8ulPU
+eoxQ3LWcth0evYQ=
+=g3tY
+-----END PGP PUBLIC KEY BLOCK-----
+    </pre>
+  </section>
+  
+  <section class="stay-tuned">
+    <h1>Finger print</h1>
+	<pre>olivier.perez@wolrdline.com</pre>
+	<pre>ED74 B9D3 62E8 FB51 BA27
+06B0 5389 1074 1517 4D15</pre>
+  </section>
+  
+  <section class="stay-tuned">
+    <h1>Conseils de survie</h1>
+	<ul class="steps">
+		<li>Taille légale : 512bits</li>
+		<li>Expiration : 1 an</li>
+		<li>Votre clé privée est... privée</li>
+		<li><strong>Phrase</strong> de passe</li>
+	</ul>
+  </section>
+  
+  <!-- Questions -->
+  
+  <section>
+	<h1>Questions ?</h1>
+	<ul class="nodisc">
+		<li><i class="fa fa-github"></i>     <a href="https://github.com/olivierperez" title="@olivierperez sur GitHub" target="_blank">@olivierperez</a></li>
+		<li><i class="fa fa-twitter"></i> <a href="https://twitter.com/olivierperez/" title="Olivier Perez">@olivierperez</a></li>
+		<li><i class="fa fa-rocket"></i> <a href="http://loicfrering.github.io/ruban/" title="Your slides on a Ruban"> Powered by Ruban</a></li>
+	</ul>
+  </section>
+  
+  <!-- End -->
+  
+  <script src="components/jquery/jquery.min.js"></script>
+  <script src="components/keymaster/keymaster.js"></script>
+  <script src="components/hammerjs/hammer.min.js"></script>
+  <script src="components/highlightjs/highlight.pack.js"></script>
+  <script src="js/ruban.js"></script>
+  <script>
+    function asciiRuban(current) {
+      var ruban = '';
+	  var fullWords = ['Pretty', 'Good', 'Privacy'];
+	  var justLetters = ['P', 'G', 'P'];
+      for (var i = 0; i < 3; i++) {
+        if (i === current) {
+          ruban += '[ ' + fullWords[i] + ' ]';
+        } else {
+          ruban += '| ' + justLetters[i] + ' |';
+        }
+        ruban += '\n';
+      }
+      return ruban;
+    }
+
+    var timeoutId, i = 0;
+
+    $('#pgp').on({
+      active: function() {
+        var $pre = $(this).find('pre');
+        timeoutId = setInterval(function() {
+          var ruban = asciiRuban(i++ % 3);
+          $pre.html(ruban);
+        }, 1000);
+      },
+      inactive: function() {
+        clearInterval(timeoutId);
+      }
+    });
+
+    $('#events').on({
+      active: function() {
+        $(this).find('h1').stop().animate({marginLeft: '2em'}, 2000);
+      },
+      inactive:function() {
+        $(this).find('h1').stop().animate({marginLeft: 0});
+      }
+    });
+	
+	$('#for-developers').on({
+      step: function() {
+        $('#for-developers .euse').delay(1000).fadeIn();
+      }
+	});
+
+    var ruban = new Ruban({
+      pagination: true,
+	  bindClicks : true
+    });
+	
+	$('a').click(function(evt){evt.stopPropagation()});
+  </script>
+</body>
+</html>
