@@ -13,17 +13,17 @@
 
 <body>
   <section id="pgp">
-	<pre style="text-align: center; font-family: 'Source Code Pro';"></pre>
+    <pre style="text-align: center; font-family: 'Source Code Pro';"></pre>
   </section>
   <section class="no-toc">
     <h1>Olivier PEREZ</h1>
     <ul class="nodisc">
       <li><i class="fa fa-map-marker"></i> Lyon, France</li>
       <li><i class="fa fa-building-o"></i> <a href="http://atosworldline.net" title="Atos Worldline" target="_blank">Atos Worldline</a>
-		<ul>
-		<span class="lower"><i class="fa fa-folder-open"></i> FGDR</span>
-		</ul>
-	  </li>
+        <ul>
+        <span class="lower"><i class="fa fa-folder-open"></i> FGDR</span>
+        </ul>
+      </li>
       <li><i class="fa fa-twitter"></i>    <a href="https://twitter.com/olivierperez" title="@olivierperez sur Twitter" target="_blank">@olivierperez</a></li>
       <li><i class="fa fa-github"></i>     <a href="https://github.com/olivierperez" title="@olivierperez sur GitHub" target="_blank">@olivierperez</a></li>
       <li><i class="fa fa-external-link"></i>     <span class="lower"><a href="https://github.com/olivierperez/prez-pgp-beginner" title="PGP Beginner Presentation" target="_blank">https://github.com/olivierperez/prez-pgp-beginner</a></span></li>
@@ -38,171 +38,194 @@
   <section class="the-tools title">
     <h1><i class="fa fa-cog"></i> Outils</h1>
   </section>
-  
+
   <!-- Reminder -->
-  
+
   <section class="reminder">
     <h1><i class="fa fa-check-square-o"></i> Rappels</h1>
-	<ol class="steps">
-		<li>PGP vs GPG</li>
-		<li>Chiffrement asymétrique</li>
-	</ol>
+    <ol>
+        <li>PGP vs GPG</li>
+        <li>Chiffrement asymétrique</li>
+    </ol>
   </section>
   <section class="reminder">
     <h1>PGP <img src="images/vs.jpg" style="vertical-align:middle;border:2px #0071B5 solid;"/> GPG</h1>
-	<ul>
-		<li>PGP - Pretty Good Privacy</li>
-		<li>GPG - GNU Privacy Guard</li>
-	</ul>
+    <ul>
+        <li>PGP - Pretty Good Privacy</li>
+        <li>GPG - GNU Privacy Guard</li>
+    <ul>
   </section>
   <section class="reminder">
     <h1>Chiffrement asymétrique</h1>
-	<ul>
-		<li>Clé publique <img src="images/lock_opened.png" class="alignwithtext"/></li>
-		<li>Clé privée <img src="images/key.png" class="alignwithtext"/></li>
-	</ul>
+    <ul class="steps">
+        <li>Clé publique <img src="images/lock_opened.png" class="alignwithtext"/></li>
+        <li>Clé privée <img src="images/key.png" class="alignwithtext"/></li>
+    <ul>
   </section>
-  <section class="reminder">
-    <h1>Pas de question !</h1>
-  </section>
-  
+
   <!-- The system -->
-  
+
   <section class="the-system">
     <h1><i class="fa fa-bullseye"></i> Système</h1>
-	<ol class="steps">
-		<li>Chiffrement</li>
-		<li>Signature</li>
-		<li>Créer un message</li>
-		<li>Toile de confiance</li>
-	</ol>
+    <ol>
+        <li>Chiffrement</li>
+        <li>Signature</li>
+        <li>Créer un message</li>
+        <li>Echange de clés</li>
+        <li>Toile de confiance</li>
+    </ol>
   </section>
   <section class="the-system">
     <h1>Chiffrement</h1>
-	<ul>
-		<li>Clé publique du destinataire</li>
-		<li>Lui seul peut déchiffrer</li>
-	</ul>
-	<br/>
-	<img src="images/encrypt.png"/>
+    <div class="steps">
+        <div>
+            <ul>
+                <li>Clé publique du destinataire</li>
+                <li>Lui seul peut déchiffrer</li>
+            <ul>
+        </div>
+        <div>
+            <img src="images/encrypt.png"/>
+        </div>
+    </div>
   </section>
   <section class="the-system">
     <h1>Signature</h1>
-	<ul>
-		<li>Clé privée de l'expéditeur</li>
-		<li>Il signe (hash) le message</li>
-		<li>Clé et sous-clé</li>
-	</ul>
-	<br/>
-	<img src="images/sign.png"/>
+    <div class="steps">
+        <div>
+            <ul>
+                <li>Clé privée de l'expéditeur</li>
+                <li>Il signe le message</li>
+            <ul>
+        </div>
+        <div>
+            <img src="images/sign.png"/>
+        </div>
+    </div>
   </section>
   <section class="the-system">
     <h1>Créer un message</h1>
-	<ul>
-		<li>Un contenu en clair</li>
-		<li>Une clé privée</li>
-		<li>Une clé publique</li>
-	</ul>
+    <ul>
+        <li>Un contenu en clair</li>
+        <li>Une clé privée</li>
+        <li>Une clé publique</li>
+    <ul>
   </section>
   <section class="the-system">
     <h1>Créer un message</h1>
-	<ul><li>Signature</li></ul>
-	<img src="images/message_format_sign.png" alt="Signature du message"/>
+    <ul><li>Signature</li></ul>
+    <img src="images/message_format_sign.png" alt="Signature du message"/>
   </section>
   <section class="the-system">
     <h1>Créer un message</h1>
-	<ul>
-		<li>Clé de session</li>
-		<li>
-			<img src="images/sym_key.png" class="alignwithtext"/>
-			=
-			<img src="images/sym_lock.png" class="alignwithtext"/>
-		</li>
-	</ul>
-	<img src="images/message_format_encrypt_sym.png" alt="Chiffrement symétrique du message"/>
+    <ul>
+        <li>Clé de session</li>
+        <li>
+            <img src="images/sym_key.png" class="alignwithtext"/>
+            =
+            <img src="images/sym_lock.png" class="alignwithtext"/>
+        </li>
+    </ul>
+    <img src="images/message_format_encrypt_sym.png" alt="Chiffrement symétrique du message"/>
   </section>
   <section class="the-system">
     <h1>Créer un message</h1>
-	<ul><li>Clé publique <img src="images/public_lock.png" class="alignwithtext"/></li></ul>
-	<img src="images/message_format_encrypt_asym.png" alt="Chiffrement de la clé de session"/>
+    <ul><li>Clé publique <img src="images/public_lock.png" class="alignwithtext"/></li></ul>
+    <img src="images/message_format_encrypt_asym.png" alt="Chiffrement de la clé de session"/>
   </section>
   <section class="the-system">
     <h1>Créer un message</h1>
-	<img src="images/message_format_summary.png" alt="Résumé du chiffrement" style="width:500px;margin:auto;display: block;"/>
+    <img src="images/message_format_summary.png" alt="Résumé du chiffrement"/>
+  </section>
+  <section class="the-system">
+    <h1>Echange de clés</h1>
+    <div class="steps">
+        <div>
+            <ul>
+                <li>De main à main</li>
+                <li>Serveur de clés</li>
+            <ul>
+        </div>
+        <div>
+            <img src="images/key-server.png"/>
+        </div>
+    </div>
   </section>
   <section class="the-system">
     <h1>Toile de confiance</h1>
-	<ul class="steps">
-		<li>J'ai confiance en mes amis</li>
-		<li>Ils ont confiance en leurs amis</li>
-		<li>J'ai confiance en Chasles</li>
-		<li>Niveaux de confiance</li>
-	</ul>
+    <ul class="steps">
+        <li>J'ai confiance en mes amis</li>
+        <li>Ils ont confiance en leurs amis</li>
+        <li>J'ai confiance en Chasles</li>
+        <li>Niveaux de confiance</li>
+    </ul>
   </section>
   <section class="the-system">
     <h1>Résumé du système</h1>
-	<ul>
-		<li>Pas de Man In The Middle</li>
-		<li>Une confiance humaine</li>
-	</ul>
+    <ul>
+        <li>Pas de Man In The Middle</li>
+        <li>Une confiance humaine</li>
+    </ul>
   </section>
   <section class="the-system">
     <h1>Questions ?</h1>
-	<pre><code class="java">if (gpgSystem.understoodBy(audience)) {
-	step.next();
+    <pre><code class="java">if (audience.understood(gpgSystem)) {
+    step.next();
 } else {
-	throw new UnderstandException("hein !?");
+    throw new UnderstandException("hein !?");
 }</code></pre>
   </section>
-  
+
   <!-- The tools -->
-  
+
   <section id="the-tools-head" class="the-tools">
     <h1><i class="fa fa-cog"></i> Outils</h1>
-	<ol class="steps">
-		<li>Pour les <strong>null</strong></li>
-		<li id="for-developers">Pour les développeurs<span class="euse">(euses)</span></li>
-		<li>Appel à l'aide</li>
-	</ol>
+    <ol>
+        <li>Pour les <span style="font-family:courier;font-weight: bold;">null</span></li>
+        <li>Pour les développeurs</li>
+        <li>Appel à l'aide</li>
+    </ol>
   </section>
   <section class="the-tools">
-    <h1>Pour les null</h1>
-	<ul>
-		<li><a href="https://www.enigmail.net/home/"><i class="fa fa-external-link"></i> Enigmail</a></li>
-		<li><a href="http://www.gpg4win.org/doc/en/gpg4win-compendium_33.html"><i class="fa fa-external-link"></i> GpgOL Outlook extension</a></li>
-		<li>
-			<a href="http://www.gpg4win.org/"><i class="fa fa-external-link"></i> Gpg4Win - Kleopatra</a>
-			<br/>
-			<img src="images/kleopatra.jpg"/>
-		</li>
-	</ul>
+    <h1>Pour les nulls</h1>
+    <ul>
+        <li><a href="https://www.mailvelope.com/"><i class="fa fa-external-link"></i> Mailvelop</a></li>
+        <li><a href="https://www.enigmail.net/home/"><i class="fa fa-external-link"></i> Enigmail</a></li>
+        <li><a href="http://www.gpg4win.org/doc/en/gpg4win-compendium_33.html"><i class="fa fa-external-link"></i> GpgOL Outlook extension</a></li>
+        <li>
+            <a href="http://www.gpg4win.org/"><i class="fa fa-external-link"></i> Gpg4Win - Kleopatra</a>
+            <br/>
+            <img src="images/kleopatra.jpg"/>
+        </li>
+    </ul>
   </section>
   <section class="the-tools">
-    <h1>Développeurs(euses)</h1>
-	<ul>
-		<li><a href="http://www.bouncycastle.org/fr/"><i class="fa fa-external-link"></i> Bouncy Castle</a>
-			<ul><li><span class="lower">C# &amp; Java</span></li></ul>
-		</li>
-		<li><a href="http://www.gnupg.org/"><i class="fa fa-external-link"></i> GnuPG</a></li>
-	</ul>
+    <h1>Développeurs</h1>
+    <ul>
+        <li><a href="http://www.bouncycastle.org/fr/"><i class="fa fa-external-link"></i> Bouncy Castle</a>
+            <ul><li><span class="lower">C# &amp; Java</span></li></ul>
+        </li>
+        <li><a href="http://www.gnupg.org/"><i class="fa fa-external-link"></i> GnuPG</a></li>
+        <li><a href="https://github.com/openpgpjs/openpgpjs"><i class="fa fa-external-link"></i> OpenPGP.js</a></li>
+    </ul>
   </section>
   <section class="the-tools">
     <h1>Appel à l'aide</h1>
-	<ul class="steps">
-		<li>TODO...</li>
-		<li>Oui, tout reste à faire !</li>
-	</ul>
+    <ul class="steps">
+        <li>TODO...</li>
+        <li>Oui, tout reste à faire !</li>
+    </ul>
   </section>
-  
+
   <!-- Stay-tuned -->
-  
+
   <section class="stay-tuned title">
     <h1><i class="fa fa-cog"></i> Stay-tuned</h1>
   </section>
-  
+
   <section class="stay-tuned publickey">
     <h1>Stay tuned</h1>
-	<pre>
+    <pre>
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1.4.6 (MingW32)
 
@@ -230,37 +253,42 @@ eoxQ3LWcth0evYQ=
 -----END PGP PUBLIC KEY BLOCK-----
     </pre>
   </section>
-  
+
   <section class="stay-tuned">
     <h1>Finger print</h1>
-	<pre>olivier.perez@worldline.com</pre>
-	<pre>ED74 B9D3 62E8 FB51 BA27
+    <pre>olivier.perez@worldline.com</pre>
+    <pre>ED74 B9D3 62E8 FB51 BA27
 06B0 5389 1074 1517 4D15</pre>
   </section>
-  
+
   <section class="stay-tuned">
     <h1>Conseils de survie</h1>
-	<ul class="steps">
-		<li>Taille légale : 512bits</li>
-		<li>Expiration : 1 an</li>
-		<li>Votre clé privée est... privée</li>
-		<li><strong>Phrase</strong> de passe</li>
-	</ul>
+    <ul>
+        <li>Expiration : 1 an</li>
+        <li>Taille légale : 512bits</li>
+        <li>Votre clé privée est... privée</li>
+        <li><strong>Phrase</strong> de passe</li>
+    </ul>
   </section>
-  
+
   <!-- Questions -->
-  
+
   <section>
-	<h1>Questions ?</h1>
-	<ul class="nodisc">
-		<li><i class="fa fa-github"></i>     <a href="https://github.com/olivierperez" title="@olivierperez sur GitHub" target="_blank">@olivierperez</a></li>
-		<li><i class="fa fa-twitter"></i> <a href="https://twitter.com/olivierperez/" title="Olivier Perez">@olivierperez</a></li>
-		<li><i class="fa fa-rocket"></i> <a href="http://loicfrering.github.io/ruban/" title="Your slides on a Ruban"> Powered by Ruban</a></li>
-	</ul>
+    <h1>Questions ?</h1>
+    <ul class="nodisc">
+        <li><i class="fa fa-github"></i>     <a href="https://github.com/olivierperez" title="@olivierperez sur GitHub" target="_blank">@olivierperez</a></li>
+        <li><i class="fa fa-twitter"></i> <a href="https://twitter.com/olivierperez/" title="Olivier Perez">@olivierperez</a></li>
+        <li><i class="fa fa-rocket"></i> <a href="http://loicfrering.github.io/ruban/" title="Your slides on a Ruban"> Powered by Ruban</a></li>
+    </ul>
   </section>
-  
+
+
+
+
   <!-- End -->
-  
+
+
+
   <script src="components/jquery/jquery.min.js"></script>
   <script src="components/keymaster/keymaster.js"></script>
   <script src="components/hammerjs/hammer.min.js"></script>
@@ -269,8 +297,8 @@ eoxQ3LWcth0evYQ=
   <script>
     function asciiRuban(current) {
       var ruban = '';
-	  var fullWords = ['Pretty', 'Good', 'Privacy'];
-	  var justLetters = ['P', 'G', 'P'];
+      var fullWords = ['Pretty', 'Good', 'Privacy'];
+      var justLetters = ['P', 'G', 'P'];
       for (var i = 0; i < 3; i++) {
         if (i === current) {
           ruban += '[ ' + fullWords[i] + ' ]';
@@ -297,27 +325,11 @@ eoxQ3LWcth0evYQ=
       }
     });
 
-    $('#events').on({
-      active: function() {
-        $(this).find('h1').stop().animate({marginLeft: '2em'}, 2000);
-      },
-      inactive:function() {
-        $(this).find('h1').stop().animate({marginLeft: 0});
-      }
-    });
-	
-	$('#for-developers').on({
-      step: function() {
-        $('#for-developers .euse').delay(1000).fadeIn();
-      }
-	});
-
     var ruban = new Ruban({
-      pagination: true,
-	  bindClicks : true
+      pagination: true
     });
-	
-	$('a').click(function(evt){evt.stopPropagation()});
+
+    $('a').click(function(evt){evt.stopPropagation()});
   </script>
 </body>
 </html>
